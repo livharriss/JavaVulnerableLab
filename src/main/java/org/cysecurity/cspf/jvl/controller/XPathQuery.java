@@ -52,7 +52,7 @@ public class XPathQuery extends HttpServlet {
             //running Xpath query:
             String name=xPath.compile(xPression).evaluate(xDoc);
             out.println(name);
-            if(name.isEmpty())
+            if(name.equalsIgnoreCase(""))
             {
                 response.sendRedirect(response.encodeURL("ForwardMe?location=/vulnerability/Injection/xpath_login.jsp?err=Invalid Credentials"));
             }
