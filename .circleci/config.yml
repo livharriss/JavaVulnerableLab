@@ -7,5 +7,5 @@ workflows:
   maven_test:
     jobs:
       - maven/test: 
-          context: RESHIFT_SCAN
+          context: "Reshift Scans"
           command: 'compile com.softwaresecured.reshift:maven-plugin:LATEST:analyse com.softwaresecured.reshift:maven-plugin:LATEST:upload -Dreshift.token=$RESHIFT_TOKEN'
